@@ -5,7 +5,7 @@ letter = "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i"
       | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J"
       | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S"
       | "T" | "U" | "V" | "W" | "X" | "Y" | "Z";
-terminal = '"', { all characters }, '"';
+terminal = '"', { all_characters }, '"';
 
 digit_excluding_zero = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 digit = "0" | digit_excluding_zero;
