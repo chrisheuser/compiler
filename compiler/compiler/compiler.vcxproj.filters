@@ -9,19 +9,20 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Supporting Files">
       <UniqueIdentifier>{ff925d2b-79e3-4518-a39e-96625dca8917}</UniqueIdentifier>
     </Filter>
     <Filter Include="Supporting Files\lecture-notes">
       <UniqueIdentifier>{9e09595f-1544-4c25-89c3-76ab5890efc1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\mostly-useless">
+      <UniqueIdentifier>{2c34d292-8ca3-4eb5-b5da-58d962dcf134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lexer">
+      <UniqueIdentifier>{425a5584-0b45-4d20-84e6-8af15038d8ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
     <Text Include="..\..\docs\grammar.txt">
       <Filter>Supporting Files</Filter>
     </Text>
@@ -33,13 +34,25 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Token.h">
+      <Filter>Source Files\lexer</Filter>
+    </ClInclude>
+    <ClInclude Include="Lexer.h">
+      <Filter>Source Files\lexer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="compiler.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files\mostly-useless</Filter>
+    </ClCompile>
+    <ClCompile Include="Token.cpp">
+      <Filter>Source Files\lexer</Filter>
+    </ClCompile>
+    <ClCompile Include="Lexer.cpp">
+      <Filter>Source Files\lexer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
