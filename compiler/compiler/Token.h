@@ -6,19 +6,6 @@ using namespace std;
 
 namespace LexerNS
 {
-    class Token
-    {
-    public:
-        Token(TokenType type, string description);
-
-        TokenType Type();
-        string Description();
-
-    private: // Private variables
-        TokenType _type;
-        string _description;
-    };
-
     enum TokenType
     {
         // Keywords:
@@ -33,6 +20,7 @@ namespace LexerNS
         Return,
 
         // Symbols:
+        None,
         CarriageReturn,
         LineFeed,
         Colon,
@@ -55,6 +43,25 @@ namespace LexerNS
         Ampersand,
         Pipe,
         Comma,
-        Semicolon
+        Semicolon,
+
+        // Others:
+        Identifier
+    };
+
+    class Token
+    {
+    public:
+        Token();
+        Token(TokenType type, string description);
+        Token(TokenType type, string description, string data);
+
+        TokenType Type();
+        string Description();
+
+    private: // Private variables
+        TokenType _type;
+        string _description;
+        string _stringData;
     };
 }

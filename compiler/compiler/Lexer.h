@@ -9,10 +9,16 @@ using namespace std;
 
 namespace LexerNS
 {
+    enum LexerState
+    {
+        NoCodeToProcess,
+        ReadyToProcess
+    };
+
     class Lexer
     {
     public: // Public methods
-        Token Current();
+        Token* Current();
         bool Advance();
 
         bool Load(string code);
@@ -20,15 +26,9 @@ namespace LexerNS
 
     private: // Private variables
         string _code;
-        int _curIdx = 0;
+        unsigned int _curIdx = 0;
 
         LexerState _state;
-        Token _mostRecentToken;
-    };
-
-    enum LexerState
-    {
-        NoCodeToProcess,
-        ReadyToProcess
+        Token* _mostRecentToken = NULL;
     };
 }
