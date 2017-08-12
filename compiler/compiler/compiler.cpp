@@ -15,7 +15,26 @@ int main()
 {
     Lexer* lexer = new Lexer();
     lexer->Load(
+
+        /*
+
+        func testMethod() {
+            something = false
+            if something == false {
+                print(false)
+            }
+
+            return true
+        }
+
+        */
+
         "func testMethod() {\r\n"
+            "something = false\r\n"
+            "if something == false {\r\n"
+                "print(false)\r\n"
+            "}\r\n"
+            "\r\n"
             "return true\r\n"
         "}"
     );
